@@ -33,4 +33,8 @@ class RadioSaiAudioPlayerTests: XCTestCase {
         }
     }
     
+    func testAudioItemCreation() {
+        let a = AudioItem.init(id: 1, date: "some-date", title: "some-title", url: "some-url")
+        XCTAssert(a.id == 1)
+    }
 }
