@@ -44,7 +44,7 @@
                                 <connections>
                                     <outlet property="dateLabel" destination="S0G-xP-mMw" id="WDA-L0-hoW"/>
                                     <outlet property="titleLabel" destination="pd6-jm-gQC" id="0lW-BI-q7z"/>
-                                    <segue destination="ENq-kC-ZDx" kind="show" action="showDetailViewController:sender:" id="orl-fE-89p"/>
+                                    <segue destination="ENq-kC-ZDx" kind="show" identifier="ShowItem" id="z2M-IN-jM0"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -59,20 +59,56 @@
             </objects>
             <point key="canvasLocation" x="1135.2" y="201.94902548725639"/>
         </scene>
-        <!--View Controller-->
+        <!--Audio Item View Controller-->
         <scene sceneID="jf8-yE-bVV">
             <objects>
-                <viewController id="ENq-kC-ZDx" sceneMemberID="viewController">
+                <viewController id="ENq-kC-ZDx" customClass="AudioItemViewController" customModule="RadioSaiAudioPlayer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="fXB-Hn-B7n">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="up9-ak-u02">
+                                <rect key="frame" x="16" y="78" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UKZ-nS-9BG">
+                                <rect key="frame" x="16" y="129" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="URL Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQ4-tR-qSY">
+                                <rect key="frame" x="16" y="181" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7c-Bc-KVn">
+                                <rect key="frame" x="164" y="237" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Open"/>
+                                <connections>
+                                    <action selector="openAudioFile:" destination="ENq-kC-ZDx" eventType="touchUpInside" id="LcJ-bh-Ksz"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="WFN-FG-kIj"/>
                     </view>
+                    <connections>
+                        <outlet property="dateLabel" destination="up9-ak-u02" id="HUC-Dt-s9e"/>
+                        <outlet property="titleLabel" destination="UKZ-nS-9BG" id="2we-9A-z5i"/>
+                        <outlet property="urlLabel" destination="MQ4-tR-qSY" id="fHE-o7-ltR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RhI-oP-mZ6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2007" y="202"/>
+            <point key="canvasLocation" x="2005.5999999999999" y="201.94902548725639"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aJF-SH-rZP">

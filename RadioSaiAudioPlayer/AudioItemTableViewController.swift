@@ -97,15 +97,32 @@ class AudioItemTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
         // Get the new view controller using segue.destinationViewController.
+        switch (segue.identifier ?? "") {
+        case "ShowItem":
+            guard let audioItemViewController = segue.destination as? AudioItemViewController else {
+                fatalError("Unexpected destination: \(segue.destination)")
+            }
+            guard let selectedAudioItemCell = sender as? AudioItemTableViewCell else {
+                fatalError("Unexpected sender: \(String(describing: sender))")
+            }
+            guard let indexPath = tableView.indexPath(for: selectedAudioItemCell) else {
+                fatalError("The selected cell is not being displayed by the table")
+            }
+            let selectedAudioItem = audioItems[indexPath.row]
+            audioItemViewController.audioItem = selectedAudioItem
+        default:
+            print(segue.identifier as Any)
+        }
         // Pass the selected object to the new view controller.
     }
-    */
+    
     
     //MARK: Private Methods
     

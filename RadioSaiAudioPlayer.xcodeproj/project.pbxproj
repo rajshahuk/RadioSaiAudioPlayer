@@ -16,6 +16,7 @@
 		35BFBD701F2D424700B3F599 /* AudioItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BFBD6F1F2D424700B3F599 /* AudioItem.swift */; };
 		35BFBD741F2D480000B3F599 /* AudioItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BFBD731F2D480000B3F599 /* AudioItemTableViewCell.swift */; };
 		35BFBD761F2D492E00B3F599 /* AudioItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BFBD751F2D492E00B3F599 /* AudioItemTableViewController.swift */; };
+		35BFBD781F2FE10800B3F599 /* AudioItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BFBD771F2FE10800B3F599 /* AudioItemViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		35BFBD6F1F2D424700B3F599 /* AudioItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioItem.swift; sourceTree = "<group>"; };
 		35BFBD731F2D480000B3F599 /* AudioItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioItemTableViewCell.swift; sourceTree = "<group>"; };
 		35BFBD751F2D492E00B3F599 /* AudioItemTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioItemTableViewController.swift; sourceTree = "<group>"; };
+		35BFBD771F2FE10800B3F599 /* AudioItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioItemViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		35BFBD401F2D418500B3F599 /* RadioSaiAudioPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				35BFBD771F2FE10800B3F599 /* AudioItemViewController.swift */,
 				35BFBD731F2D480000B3F599 /* AudioItemTableViewCell.swift */,
 				35BFBD411F2D418600B3F599 /* AppDelegate.swift */,
 				35BFBD6F1F2D424700B3F599 /* AudioItem.swift */,
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35BFBD741F2D480000B3F599 /* AudioItemTableViewCell.swift in Sources */,
+				35BFBD781F2FE10800B3F599 /* AudioItemViewController.swift in Sources */,
 				35BFBD761F2D492E00B3F599 /* AudioItemTableViewController.swift in Sources */,
 				35BFBD701F2D424700B3F599 /* AudioItem.swift in Sources */,
 				35BFBD421F2D418600B3F599 /* AppDelegate.swift in Sources */,
@@ -433,6 +437,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = XKG94W6666;
 				INFOPLIST_FILE = RadioSaiAudioPlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.12nines.RadioSaiAudioPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -447,6 +452,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = XKG94W6666;
 				INFOPLIST_FILE = RadioSaiAudioPlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.12nines.RadioSaiAudioPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
